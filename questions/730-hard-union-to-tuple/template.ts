@@ -13,4 +13,4 @@ U extends unknown ? (x: U) => 0 : never
 type UnionToTuple<U, Last = LastInUnion<U>> = [U] extends [never]
   ? []
   : [...UnionToTuple<Exclude<U, Last>>, Last]
-type h = (((x: 1) => 0) & ((x: 2) => 0)) extends (x: infer R) => any ? R :never
+// type h = (((x: 1) => 0) & ((x: 2) => 0)) extends (x: infer R) => any ? R :never
